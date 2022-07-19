@@ -106,6 +106,12 @@ class SkinConverter:
     def save_to_file(self, file_path):
         cv2.imwrite(file_path, self._image)
 
+    def load_from_bytes(self, image_bytes: bytes):
+        self._image = cv2.imdecode(np.frombuffer(image_bytes, np.uint8), cv2.IMREAD_UNCHANGED)
+
+    def save_to_bytes(self):
+        return cv2.imencode('.png', self._image)[1].tobytes()
+
     def is_valid_skin(self):
         h, w, c = self._image.shape
         return w == h and self._get_ratio_to_base() % 1 == 0

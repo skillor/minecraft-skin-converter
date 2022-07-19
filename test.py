@@ -21,6 +21,16 @@ class Tests(unittest.IsolatedAsyncioTestCase):
         sc.convert()
         self.assertTrue(sc.is_steve())
 
+    def test_convert_alex_bytes(self):
+        working_dir = os.path.dirname(os.path.abspath(__file__))
+        sc = SkinConverter()
+        with open('images/alex.png', 'rb') as f:
+            sc.load_from_bytes(f.read())
+        self.assertFalse(sc.is_steve())
+        image_bytes = sc.save_to_bytes()
+        sc.load_from_bytes(image_bytes)
+        self.assertFalse(sc.is_steve())
+
 
 if __name__ == '__main__':
     unittest.main()
