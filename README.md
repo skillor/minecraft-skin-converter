@@ -1,4 +1,7 @@
 # Minecraft Skin Converter
+
+[![Build Status](https://github.com/skillor/minecraft-skin-converter/actions/workflows/test-python.yml/badge.svg)](https://github.com/skillor/minecraft-skin-converter/actions/workflows/test-python.yml) [![PyPi version](https://badgen.net/pypi/v/minecraft-skin-converter/)](https://pypi.org/project/minecraft-skin-converter)
+
 This is a simplified version of https://github.com/811Alex/MCSkinConverter, ported to python.
 Big Thanks to the original creator [811Alex](https://github.com/811Alex)
 
@@ -6,7 +9,9 @@ Convert skins from alex to steve and vice versa.
 
 ## Installation
 
-> pip install minecraft-skin-converter
+```bash
+pip install minecraft-skin-converter
+```
 
 ## Basic Usage
 ```python
