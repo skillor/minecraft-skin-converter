@@ -10,7 +10,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(name='Minecraft Skin Converter',
       packages=['minecraft_skin_converter'],
-      version='1.1',
+      version='1.2',
       description='Convert minecraft skins from steve to alex and vice versa',
       author='skillor',
       author_email='skillor@gmx.net',
